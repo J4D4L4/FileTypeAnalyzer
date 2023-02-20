@@ -19,7 +19,7 @@ public class fileReader {
         }
         catch (Exception ex) {
             ex.printStackTrace();
-            return null;
+            return "";
         }
 
     }

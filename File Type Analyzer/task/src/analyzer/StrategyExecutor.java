@@ -8,8 +8,8 @@ public class StrategyExecutor {
         this.analyseStrategy = analyseStrategy;
     }
 
-    public void analyse(String path, String pattern, String result){
-        analyseStrategy.analyse(path,pattern,result);
+    public String analyse(String path, String pattern, String result){
+        return analyseStrategy.analyse(path,pattern,result);
     }
 
 }
