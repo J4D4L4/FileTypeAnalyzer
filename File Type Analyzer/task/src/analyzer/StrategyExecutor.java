@@ -12,4 +12,9 @@ public class StrategyExecutor {
         return analyseStrategy.analyse(path,pattern,result);
     }
 
+    public String analyse(String path, FilePattern[] pattern, String result){
+        return analyseStrategy.analyse(path,pattern,result);
+    }
+
+
 }

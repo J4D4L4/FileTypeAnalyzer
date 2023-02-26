@@ -2,8 +2,10 @@ package analyzer;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
 
-public class fileReader {
+public class FileReaderLocal {
 
 
     public static String readFile(String filePath) {
@@ -42,6 +44,20 @@ public class fileReader {
             }
             return sb.toString();
         }
+    }
+
+    public static List<FilePattern> readPatternFile(String filePath){
+
+        String[] lines = readFile(filePath).split("\n");
+        List<FilePattern> filePatterns = new ArrayList<>();
+
+        for (String line : lines){
+            String[] element = line.split(";");
+            filePatterns.add(new FilePattern(Integer.parseInt(element[0]), element[1].replace("\"",""), element[2].replace("\"","")));
+        }
+
+        return filePatterns;
+
     }
 
 }
