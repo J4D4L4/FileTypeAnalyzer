@@ -18,15 +18,6 @@ public class Main {
 
         analyseFolderStructureForPatternDB(args[0], args[1]);
 
-        /*
-
-        ExecutorService executor = Executors.newFixedThreadPool(10);
-        String [] listOfFiles = Arrays.stream(new File(args[0]).listFiles()).map(file -> file.getPath()).toArray(String[]::new);
-        for(String filePath : listOfFiles){
-            Future<String> returnString = executor.submit(WorkerAnalysis.getCallable(filePath,args[1], args[2]));
-            String toPrint = returnString.get();
-            System.out.println(toPrint);
-        }*/
 
 
     }
