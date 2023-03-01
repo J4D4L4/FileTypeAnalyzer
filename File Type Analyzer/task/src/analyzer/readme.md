@@ -1,0 +1,3 @@
+File Type Analyser
+
+n this project, you will learn how to make a tool for determining file type. It's not like determining file type based on the extension of the file; the filename can be random. Actually, many file types contain special byte sequences that make it easy to determine them. You’ll start from a simple program that can only search for an occurrence of the specific pattern inside a single file and gradually turn it into a more practical solution that can check hundreds and thousands of files against a huge pattern set. Each pattern has information about a file type which will be reported to the user when there is a successful match.
